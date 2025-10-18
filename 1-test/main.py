@@ -1,6 +1,9 @@
-def main():
-    print("Hello from 1-test!")
+from strands_agents import Agent
 
+agent = Agent()
+
+def invoke(agent: Agent, input: str) -> str:
+    return agent(input)
 
 if __name__ == "__main__":
-    main()
+    print(invoke(agent, "Hello, world!"))
